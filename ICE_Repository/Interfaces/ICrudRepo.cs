@@ -12,10 +12,10 @@ namespace ICE_Repository.Interfaces
     {
         Crud Create(Crud crud);
         List<Crud> GetAll();
-        Crud UpdateById(int id, Crud updatedUser);
+        Crud UpdateById(int id, Crud updatedRow);
         Crud DeleteById(int id);
     }
-    public interface IUserRepository : ICrudRepo<Users>
-    {
-    }
+    public interface IUserRepository : ICrudRepo<Users>{ }
+
+    public interface IRecipeRepo : ICrudRepo<Recipe>{ }
 }

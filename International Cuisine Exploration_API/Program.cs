@@ -22,6 +22,7 @@ builder.Services.AddDbContext<DataContext>(obj => obj.UseSqlServer(conStr));
 
 // DI
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IRecipeRepo, RecipeRepo>();
 
 var app = builder.Build();
 
