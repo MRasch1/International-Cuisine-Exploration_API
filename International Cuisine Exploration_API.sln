@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "International Cuisine Exploration_API", "International Cuisine Exploration_API\International Cuisine Exploration_API.csproj", "{C3027FD4-7DC0-47A5-A06F-2F4F6002EDDD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C2D2036B-203A-40A5-92F2-15FCEBE5BC71} = {C2D2036B-203A-40A5-92F2-15FCEBE5BC71}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICE_Repository", "ICE_Repository\ICE_Repository.csproj", "{C2D2036B-203A-40A5-92F2-15FCEBE5BC71}"
 EndProject
