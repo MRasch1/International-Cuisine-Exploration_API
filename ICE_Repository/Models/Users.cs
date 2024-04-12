@@ -13,8 +13,8 @@ namespace ICE_Repository.Models
     {
         [Key]
         public int UserId { get; set; }
-        public int Username { get; set; }
-        public int Email { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
         public int DietaryPreferenceId { get; set; }
     }
