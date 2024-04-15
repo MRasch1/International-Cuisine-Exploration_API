@@ -18,7 +18,7 @@ namespace International_Cuisine_Exploration_API.Controllers
             this.repo = repo;
         }
 
-
+        //Changed varible names so it's easier to copy&paste
 
         //get: api/<samuraicontroller>
         [HttpGet] // this is a dataannotation / attribute
@@ -30,16 +30,16 @@ namespace International_Cuisine_Exploration_API.Controllers
 
         // Create: api/<SamuraiController>
         [HttpPost]
-        public void Create(Users user)
+        public void Create(Users column)
         {
-            repo.Create(user);
+            repo.Create(column);
 
         }
 
         [HttpPut("{id}")]
-        public Users UpdateById(int id, Users updatedUser)
+        public Users UpdateById(int id, Users updatedColumn)
         {
-            return repo.UpdateById(id, updatedUser);
+            return repo.UpdateById(id, updatedColumn);
         }
 
         [HttpDelete("{id}")]

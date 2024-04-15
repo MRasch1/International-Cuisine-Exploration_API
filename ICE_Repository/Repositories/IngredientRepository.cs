@@ -32,7 +32,7 @@ namespace ICE_Repository.Repositories
 
         public Ingredient UpdateById(int id, Ingredient updatedIngredient)
         {
-            var ingredient = context.Ingredients.FirstOrDefault(r => r.IngredientsId == id);
+            var ingredient = context.Ingredients.FirstOrDefault(i => i.IngredientsId == id);
 
             if (ingredient != null)
             {
@@ -47,7 +47,7 @@ namespace ICE_Repository.Repositories
 
         public Ingredient DeleteById(int id)
         {
-            var ingredient = context.Ingredients.FirstOrDefault(r => r.IngredientsId == id);
+            var ingredient = context.Ingredients.FirstOrDefault(i => i.IngredientsId == id);
 
             if (ingredient != null)
             {
