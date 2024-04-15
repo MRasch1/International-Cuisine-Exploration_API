@@ -20,4 +20,5 @@ namespace ICE_Repository.Interfaces
     public interface IRecipeRepo : ICrudRepo<Recipe>{ }
 
     public interface IIngredientRepo : ICrudRepo<Ingredient> { }
+    public interface IKitchenRepo : ICrudRepo<Kitchen> { }
 }

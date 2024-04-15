@@ -9,37 +9,36 @@ using System.Threading.Tasks;
 
 namespace ICE_Repository.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class KitchenRepo : IKitchenRepo
     {
         private readonly DataContext context;
-        public UserRepository(DataContext data)
+        public KitchenRepo(DataContext data)
         {
             this.context = data;
         }
 
-        public Users Create(Users column)
+        public Kitchen Create(Kitchen column)
         {
             // Context is our Database
-            context.Users.Add(column);
+            context.Kitchens.Add(column);
             context.SaveChanges();
             return column;
         }
 
-        public List<Users> GetAll()
+        public List<Kitchen> GetAll()
         {
-            return context.Users.ToList();
+            return context.Kitchens.ToList();
         }
 
-        public Users UpdateById(int id, Users updatedColumn)
+        public Kitchen UpdateById(int id, Kitchen updatedColumn)
         {
-            var column = context.Users.FirstOrDefault(c => c.UserId == id);
+            var column = context.Kitchens.FirstOrDefault(c => c.KitchenId == id);
 
             if (column != null)
             {
-                column.Username = updatedColumn.Username;
-                column.Email = updatedColumn.Email;
-                column.Password = updatedColumn.Password;
-                column.DietaryPreferenceId = updatedColumn.DietaryPreferenceId;
+                column.Name = updatedColumn.Name;
+                column.Continent = updatedColumn.Continent;
+                column.Region = updatedColumn.Region;
 
                 context.SaveChanges();
             }
@@ -47,13 +46,13 @@ namespace ICE_Repository.Repositories
             return column;
         }
 
-        public Users DeleteById(int id)
+        public Kitchen DeleteById(int id)
         {
-            var column = context.Users.FirstOrDefault(c => c.UserId == id);
+            var column = context.Kitchens.FirstOrDefault(c => c.KitchenId == id);
 
             if (column != null)
             {
-                context.Users.Remove(column);
+                context.Kitchens.Remove(column);
                 context.SaveChanges();
             }
             return column;
