@@ -21,6 +21,7 @@ namespace ICE_Repository.Context
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Kitchen> Kitchens { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
 
     }
