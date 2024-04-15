@@ -26,6 +26,8 @@ builder.Services.AddScoped<IRecipeRepo, RecipeRepo>();
 builder.Services.AddScoped<IIngredientRepo, IngredientRepository>();
 builder.Services.AddScoped<IKitchenRepo, KitchenRepo>();
 builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
+builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
+builder.Services.AddScoped<IUserFavoriteRepo, UserFavoriteRepo>();
 
 var app = builder.Build();
 
