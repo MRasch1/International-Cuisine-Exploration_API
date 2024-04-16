@@ -17,5 +17,8 @@ namespace ICE_Repository.Models
         public string CountryName { get; set; }
 
         public string Continent { get; set; }
+        public List<Regions> RegionId { get; set; }
+        public List<Language> LanguageId { get; set; }
+        public List<Kitchen> KitchenId { get; set;}
     }
 }

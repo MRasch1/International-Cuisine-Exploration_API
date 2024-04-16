@@ -14,5 +14,6 @@ namespace ICE_Repository.Models
         [Key]
         public int LanguageId { get; set; }
         public string LanguageName { get; set; }
+        public Country CountryId { get; set; }
     }
 }
