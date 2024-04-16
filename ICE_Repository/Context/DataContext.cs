@@ -19,7 +19,11 @@ namespace ICE_Repository.Context
 
         public DbSet<Users> Users { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
-
+        public DbSet<Ingredient> Ingredients { get; set; }
+        public DbSet<Kitchen> Kitchens { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<UserFavorite> UserFavorites { get; set; }
 
 
     }

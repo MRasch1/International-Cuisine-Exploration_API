@@ -9,37 +9,35 @@ using System.Threading.Tasks;
 
 namespace ICE_Repository.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserFavoriteRepo : IUserFavoriteRepo
     {
         private readonly DataContext context;
-        public UserRepository(DataContext data)
+        public UserFavoriteRepo(DataContext data)
         {
             this.context = data;
         }
 
-        public Users Create(Users column)
+        public UserFavorite Create(UserFavorite column)
         {
             // Context is our Database
-            context.Users.Add(column);
+            context.UserFavorites.Add(column);
             context.SaveChanges();
             return column;
         }
 
-        public List<Users> GetAll()
+        public List<UserFavorite> GetAll()
         {
-            return context.Users.ToList();
+            return context.UserFavorites.ToList();
         }
 
-        public Users UpdateById(int id, Users updatedColumn)
+        public UserFavorite UpdateById(int id, UserFavorite updatedColumn)
         {
-            var column = context.Users.FirstOrDefault(c => c.UserId == id);
+            var column = context.UserFavorites.FirstOrDefault(c => c.UserFavoriteId == id);
 
             if (column != null)
             {
-                column.Username = updatedColumn.Username;
-                column.Email = updatedColumn.Email;
-                column.Password = updatedColumn.Password;
-                column.DietaryPreferenceId = updatedColumn.DietaryPreferenceId;
+                column.RecipeId = updatedColumn.RecipeId;
+                column.UserId = updatedColumn.UserId;
 
                 context.SaveChanges();
             }
@@ -47,13 +45,13 @@ namespace ICE_Repository.Repositories
             return column;
         }
 
-        public Users DeleteById(int id)
+        public UserFavorite DeleteById(int id)
         {
-            var column = context.Users.FirstOrDefault(c => c.UserId == id);
+            var column = context.UserFavorites.FirstOrDefault(c => c.UserFavoriteId == id);
 
             if (column != null)
             {
-                context.Users.Remove(column);
+                context.UserFavorites.Remove(column);
                 context.SaveChanges();
             }
             return column;

@@ -9,37 +9,37 @@ using System.Threading.Tasks;
 
 namespace ICE_Repository.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class ReviewRepo : IReviewRepo
     {
         private readonly DataContext context;
-        public UserRepository(DataContext data)
+        public ReviewRepo(DataContext data)
         {
             this.context = data;
         }
 
-        public Users Create(Users column)
+        public Review Create(Review column)
         {
             // Context is our Database
-            context.Users.Add(column);
+            context.Reviews.Add(column);
             context.SaveChanges();
             return column;
         }
 
-        public List<Users> GetAll()
+        public List<Review> GetAll()
         {
-            return context.Users.ToList();
+            return context.Reviews.ToList();
         }
 
-        public Users UpdateById(int id, Users updatedColumn)
+        public Review UpdateById(int id, Review updatedColumn)
         {
-            var column = context.Users.FirstOrDefault(c => c.UserId == id);
+            var column = context.Reviews.FirstOrDefault(c => c.ReviewId == id);
 
             if (column != null)
             {
-                column.Username = updatedColumn.Username;
-                column.Email = updatedColumn.Email;
-                column.Password = updatedColumn.Password;
-                column.DietaryPreferenceId = updatedColumn.DietaryPreferenceId;
+                column.Rating = updatedColumn.Rating;
+                column.Comment = updatedColumn.Comment;
+                column.UserId = updatedColumn.UserId;
+                column.RecipeId = updatedColumn.RecipeId;
 
                 context.SaveChanges();
             }
@@ -47,13 +47,13 @@ namespace ICE_Repository.Repositories
             return column;
         }
 
-        public Users DeleteById(int id)
+        public Review DeleteById(int id)
         {
-            var column = context.Users.FirstOrDefault(c => c.UserId == id);
+            var column = context.Reviews.FirstOrDefault(c => c.ReviewId == id);
 
             if (column != null)
             {
-                context.Users.Remove(column);
+                context.Reviews.Remove(column);
                 context.SaveChanges();
             }
             return column;

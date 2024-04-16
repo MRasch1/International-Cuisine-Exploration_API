@@ -9,37 +9,35 @@ using System.Threading.Tasks;
 
 namespace ICE_Repository.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class CategoryRepo : ICategoryRepo
     {
         private readonly DataContext context;
-        public UserRepository(DataContext data)
+        public CategoryRepo(DataContext data)
         {
             this.context = data;
         }
 
-        public Users Create(Users column)
+        public Category Create(Category column)
         {
             // Context is our Database
-            context.Users.Add(column);
+            context.Categories.Add(column);
             context.SaveChanges();
             return column;
         }
 
-        public List<Users> GetAll()
+        public List<Category> GetAll()
         {
-            return context.Users.ToList();
+            return context.Categories.ToList();
         }
 
-        public Users UpdateById(int id, Users updatedColumn)
+        public Category UpdateById(int id, Category updatedColumn)
         {
-            var column = context.Users.FirstOrDefault(c => c.UserId == id);
+            var column = context.Categories.FirstOrDefault(c => c.CategoryId == id);
 
             if (column != null)
             {
-                column.Username = updatedColumn.Username;
-                column.Email = updatedColumn.Email;
-                column.Password = updatedColumn.Password;
-                column.DietaryPreferenceId = updatedColumn.DietaryPreferenceId;
+                column.Name = updatedColumn.Name;
+                column.IngredientsId = updatedColumn.IngredientsId;
 
                 context.SaveChanges();
             }
@@ -47,13 +45,13 @@ namespace ICE_Repository.Repositories
             return column;
         }
 
-        public Users DeleteById(int id)
+        public Category DeleteById(int id)
         {
-            var column = context.Users.FirstOrDefault(c => c.UserId == id);
+            var column = context.Categories.FirstOrDefault(c => c.CategoryId == id);
 
             if (column != null)
             {
-                context.Users.Remove(column);
+                context.Categories.Remove(column);
                 context.SaveChanges();
             }
             return column;

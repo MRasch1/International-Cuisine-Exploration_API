@@ -9,11 +9,11 @@ namespace International_Cuisine_Exploration_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class CategoryController : ControllerBase
     {
-        private readonly IUserRepository repo;
+        private readonly ICategoryRepo repo;
 
-        public UsersController(IUserRepository repo)
+        public CategoryController(ICategoryRepo repo)
         {
             this.repo = repo;
         }
@@ -22,7 +22,7 @@ namespace International_Cuisine_Exploration_API.Controllers
 
         //get: api/<samuraicontroller>
         [HttpGet] // this is a dataannotation / attribute
-        public List<Users> GetAll()
+        public List<Category> GetAll()
         {
             // If I want to DEBUG
             return repo.GetAll();
@@ -30,20 +30,20 @@ namespace International_Cuisine_Exploration_API.Controllers
 
         // Create: api/<SamuraiController>
         [HttpPost]
-        public void Create(Users column)
+        public void Create(Category column)
         {
             repo.Create(column);
 
         }
 
         [HttpPut("{id}")]
-        public Users UpdateById(int id, Users updatedColumn)
+        public Category UpdateById(int id, Category updatedColumn)
         {
             return repo.UpdateById(id, updatedColumn);
         }
 
         [HttpDelete("{id}")]
-        public Users DeleteById(int id)
+        public Category DeleteById(int id)
         {
             return repo.DeleteById(id);
         }
