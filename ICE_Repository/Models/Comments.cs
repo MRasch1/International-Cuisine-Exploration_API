@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace ICE_Repository.Models
 {
@@ -15,11 +16,12 @@ namespace ICE_Repository.Models
         public int CommentId { get; set; }
 
         public int UserId { get; set; }
-        public Users User { get; set; }
+        [JsonIgnore]
+        public virtual Users? User { get; set; }
 
         public int RecipeId { get; set; }
-
-        public Recipe Recipe { get; set; }
+        [JsonIgnore]
+        public virtual Recipe? Recipe { get; set; }
 
         public string Text { get; set; }
     }
