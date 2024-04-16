@@ -35,9 +35,9 @@ namespace ICE_Repository.Repositories
             {
                 country.CountryName = updatedCountry.CountryName;
                 country.Continent = updatedCountry.Continent;
-                country.RegionId = updatedCountry.RegionId;
-                country.LanguageId = updatedCountry.LanguageId;
-                country.KitchenId = updatedCountry.KitchenId;
+                country.Region = updatedCountry.Region;
+                country.Language = updatedCountry.Language;
+                country.Kitchen = updatedCountry.Kitchen;
 
                 context.SaveChanges();
             }

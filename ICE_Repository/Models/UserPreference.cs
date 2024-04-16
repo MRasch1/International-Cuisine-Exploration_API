@@ -1,5 +1,4 @@
-﻿using ICE_Repository.Migrations;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ICE_Repository.Models
@@ -12,6 +11,6 @@ namespace ICE_Repository.Models
         public string PreferenceType { get; set; }
 
         public string PreferenceDescription { get; set; }
-        public DietaryPreference DietaryPreferenceId { get; set; }
+        public List<DietaryPreference> DietaryPreferenceId { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using ICE_Repository.Migrations;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,8 +17,12 @@ namespace ICE_Repository.Models
         public string CountryName { get; set; }
 
         public string Continent { get; set; }
-        public List<Regions> RegionId { get; set; }
-        public List<Language> LanguageId { get; set; }
-        public List<Kitchen> KitchenId { get; set;}
+
+        //Navigation Property
+        public List<Regions> Region { get; set; }
+        //Navigation Property
+        public List<Language> Language { get; set; }
+        //Navigation Property
+        public List<Kitchen> Kitchen { get; set;}
     }
 }

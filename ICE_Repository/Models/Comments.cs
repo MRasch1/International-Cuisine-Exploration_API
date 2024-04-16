@@ -1,4 +1,4 @@
-﻿using ICE_Repository.Migrations;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,9 +14,12 @@ namespace ICE_Repository.Models
         [Key]
         public int CommentId { get; set; }
 
-        public Users UserId { get; set; }
+        public int UserId { get; set; }
+        public Users User { get; set; }
 
-        public Recipe RecipeId { get; set; }
+        public int RecipeId { get; set; }
+
+        public Recipe Recipe { get; set; }
 
         public string Text { get; set; }
     }

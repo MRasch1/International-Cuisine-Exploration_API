@@ -39,7 +39,7 @@ namespace ICE_Repository.Repositories
 
         public RecipeTag DeleteByRecipeId(int recipeId)
         {
-            var recipeTags = context.RecipeTags.Where(rt => rt.Recipe.RecipeId == recipeId).ToList();
+            var recipeTags = context.RecipeTags.Where(rt => rt.Recipes.RecipeId == recipeId).ToList();
 
             if (recipeTags != null)
             {

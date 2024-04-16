@@ -1,5 +1,4 @@
-﻿using ICE_Repository.Migrations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
@@ -14,6 +13,9 @@ namespace ICE_Repository.Models
         [Key]
         public int LanguageId { get; set; }
         public string LanguageName { get; set; }
-        public Country CountryId { get; set; }
+        //Foreign Key
+        public int CountryId { get; set; }
+        //Navigation Property
+        public Country Country { get; set; }
     }
 }

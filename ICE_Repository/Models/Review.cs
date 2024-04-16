@@ -12,7 +12,9 @@ namespace ICE_Repository.Models
         [Key]public int ReviewId { get; set; }
         public int Rating { get; set; }
         public string Comment { get; set; }
-        public Users UserId { get; set; }
-        public Recipe RecipeId { get; set; }
+        public int UserId { get; set; }
+        public Users User { get; set; }
+        public int RecipeId { get; set; }
+        public Recipe Recipe { get; set; }
     }
 }

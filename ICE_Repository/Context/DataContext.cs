@@ -35,7 +35,8 @@ namespace ICE_Repository.Context
         public DbSet<DietaryPreference> DietaryPreferences { get; set; }
         public DbSet<UserPreference> UserPreferences { get; set; }
         public DbSet<RecipeTag> RecipeTags { get; set; }
-
+        //public DbSet<UserDietaryPreferenceJOIN> UserDietaryPreferenceJOIN { get; set; }
+        //public DbSet<UserFavoriteRecipeJOIN> UserFavoriteRecipeJOIN { get; set; }
 
     }
 }
