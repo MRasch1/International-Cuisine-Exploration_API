@@ -5,17 +5,18 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace ICE_Repository.Models
 {
     public class DietaryPreference
     {
         [Key]public int DietaryPreferenceId { get; set; }
-        public List<UserDietaryPreferenceJOIN> UserId { get; set; }
+        [JsonIgnore] public List<UserDietaryPreferenceJOIN>? UserId { get; set; }
 
 
         public int PreferenceId { get; set; }
-        public UserPreference Preference { get; set; }
+        [JsonIgnore] public UserPreference? Preference { get; set; }
     }
 
     public class UserDietaryPreferenceJOIN

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ICE_Repository.Models
@@ -15,8 +16,8 @@ namespace ICE_Repository.Models
         public string Instructions { get; set; }
         public int Difficulty { get; set; }
         public int PreperationTime { get; set; }
-        public List<UserFavoriteRecipeJOIN> UserFavorites { get; set; }
-        public List<RecipeTag> RecipeTag { get; set; }
-        public List<Comments> CommentId { get; set; }
+        [JsonIgnore]public List<UserFavoriteRecipeJOIN>? UserFavorites { get; set; }
+        [JsonIgnore]public List<RecipeTag>? RecipeTag { get; set; }
+        [JsonIgnore]public List<Comments>? CommentId { get; set; }
     }
 }

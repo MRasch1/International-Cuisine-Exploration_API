@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace ICE_Repository.Models
 {
@@ -16,6 +17,6 @@ namespace ICE_Repository.Models
         //Foreign Key
         public int CountryId { get; set; }
         //Navigation Property
-        public Country Country { get; set; }
+        [JsonIgnore] public Country? Country { get; set; }
     }
 }

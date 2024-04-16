@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ICE_Repository.Models
@@ -15,6 +16,6 @@ namespace ICE_Repository.Models
         public string Continent { get; set; }
         public string Region { get; set; }
         public int CountryId { get; set; }
-        public Country Country { get; set; }
+        [JsonIgnore] public Country? Country { get; set; }
     }
 }

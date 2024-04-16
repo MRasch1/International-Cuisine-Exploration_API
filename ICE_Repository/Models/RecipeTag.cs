@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ICE_Repository.Models
 {
@@ -7,7 +8,7 @@ namespace ICE_Repository.Models
     {
         public int RecipeTagId { get; set; }
         public int RecipeId { get; set; }
-        public Recipe Recipes { get; set; }
+        [JsonIgnore] public Recipe? Recipes { get; set; }
         public string Tag { get; set; }
     }
 
