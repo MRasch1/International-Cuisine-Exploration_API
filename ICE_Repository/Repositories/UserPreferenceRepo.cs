@@ -33,9 +33,10 @@ namespace ICE_Repository.Repositories
 
             if (userPreference != null)
             {
-                userPreference.UserId = updatedUserPreference.UserId;
+                
                 userPreference.PreferenceType = updatedUserPreference.PreferenceType;
                 userPreference.PreferenceDescription = updatedUserPreference.PreferenceDescription;
+                userPreference.DietaryPreferenceId = updatedUserPreference.DietaryPreferenceId;
 
                 context.SaveChanges();
             }

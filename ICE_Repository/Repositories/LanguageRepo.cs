@@ -34,6 +34,7 @@ namespace ICE_Repository.Repositories
             if (language != null)
             {
                 language.LanguageName = updatedLanguage.LanguageName;
+                language.CountryId = updatedLanguage.CountryId;
 
                 context.SaveChanges();
             }
