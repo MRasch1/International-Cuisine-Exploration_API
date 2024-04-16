@@ -15,5 +15,7 @@ namespace ICE_Repository.Models
         public string Instructions { get; set; }
         public int Difficulty { get; set; }
         public int PreperationTime { get; set; }
+        public List<RecipeTag> RecipeTagId { get; set; }
+        public List<Comments> CommentId { get; set; }
     }
 }

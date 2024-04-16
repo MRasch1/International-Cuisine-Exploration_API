@@ -14,5 +14,6 @@ namespace ICE_Repository.Models
         public string Name { get; set; }
         public string Continent { get; set; }
         public string Region { get; set; }
+        public Country CountryId { get; set; }
     }
 }

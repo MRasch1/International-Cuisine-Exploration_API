@@ -11,7 +11,7 @@ namespace ICE_Repository.Models
 {
     public class DietaryPreference
     {
-        public Users UserId { get; set; }
+        public List<Users> UserId { get; set; }
 
         public UserPreference PreferenceId { get; set; }
     }

@@ -39,7 +39,9 @@ namespace ICE_Repository.Repositories
                 column.Username = updatedColumn.Username;
                 column.Email = updatedColumn.Email;
                 column.Password = updatedColumn.Password;
+                column.CommentId = updatedColumn.CommentId;
                 column.DietaryPreferenceId = updatedColumn.DietaryPreferenceId;
+                column.ReviewId = updatedColumn.ReviewId;
 
                 context.SaveChanges();
             }
