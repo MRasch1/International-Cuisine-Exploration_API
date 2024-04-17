@@ -13,7 +13,7 @@ namespace ICE_Repository.Models
     {
         [Key]
         public int LanguageId { get; set; }
-        public string LanguageName { get; set; }
+        public string? LanguageName { get; set; }
         //Foreign Key
         public int CountryId { get; set; }
         //Navigation Property

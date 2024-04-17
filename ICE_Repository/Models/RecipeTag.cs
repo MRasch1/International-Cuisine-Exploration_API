@@ -9,7 +9,7 @@ namespace ICE_Repository.Models
         public int RecipeTagId { get; set; }
         public int RecipeId { get; set; }
         [JsonIgnore] public Recipe? Recipes { get; set; }
-        public string Tag { get; set; }
+        public string? Tag { get; set; }
     }
 
 }

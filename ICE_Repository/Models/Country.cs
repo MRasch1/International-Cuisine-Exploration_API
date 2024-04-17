@@ -15,9 +15,9 @@ namespace ICE_Repository.Models
         [Key]
         public int CountryId { get; set; }
 
-        public string CountryName { get; set; }
+        public string? CountryName { get; set; }
 
-        public string Continent { get; set; }
+        public string? Continent { get; set; }
 
         //Navigation Property
         [JsonIgnore] public List<Regions>? Region { get; set; }

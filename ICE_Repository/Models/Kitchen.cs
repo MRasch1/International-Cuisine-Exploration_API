@@ -12,9 +12,9 @@ namespace ICE_Repository.Models
     {
         [Key]
         public int KitchenId { get; set; }
-        public string Name { get; set; }
-        public string Continent { get; set; }
-        public string Region { get; set; }
+        public string? Name { get; set; }
+        public string? Continent { get; set; }
+        public string? Region { get; set; }
         public int CountryId { get; set; }
         [JsonIgnore] public Country? Country { get; set; }
     }

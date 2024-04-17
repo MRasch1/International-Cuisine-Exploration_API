@@ -27,11 +27,11 @@ namespace ICE_Repository.Models
         //Foreign Key
         public int UserId { get; set; }
         //Navigation Property
-        public Users User { get; set; }
+        public Users? User { get; set; }
 
         //Foreign Key
         public int DietaryPreferenceId { get; set; }
         //Navigation Property
-        public DietaryPreference DietaryPreference { get; set; }
+        public DietaryPreference? DietaryPreference { get; set; }
     }
 }

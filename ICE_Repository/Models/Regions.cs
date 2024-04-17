@@ -14,7 +14,7 @@ namespace ICE_Repository.Models
         [Key]
         public int RegionId { get; set; }
 
-        public string RegionName { get; set; }
+        public string? RegionName { get; set; }
 
         //Foreign Key
         public int CountryId { get; set; }

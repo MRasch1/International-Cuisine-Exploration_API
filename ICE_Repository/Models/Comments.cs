@@ -21,6 +21,6 @@ namespace ICE_Repository.Models
         public int RecipeId { get; set; }
         [JsonIgnore] public virtual Recipe? Recipe { get; set; }
 
-        public string Text { get; set; }
+        public string? Text { get; set; }
     }
 }

@@ -9,9 +9,9 @@ namespace ICE_Repository.Models
         [Key]
         public int PreferenceId { get; set; }
 
-        public string PreferenceType { get; set; }
+        public string? PreferenceType { get; set; }
 
-        public string PreferenceDescription { get; set; }
+        public string? PreferenceDescription { get; set; }
         [JsonIgnore] public List<DietaryPreference>? DietaryPreferenceId { get; set; }
     }
 }
