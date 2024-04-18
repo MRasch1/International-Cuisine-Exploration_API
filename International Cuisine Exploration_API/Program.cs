@@ -29,6 +29,20 @@ builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
 builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
 builder.Services.AddScoped<IUserFavoriteRepo, UserFavoriteRepo>();
 
+//Cross Thread problems
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("coffee",
+                          policy =>
+                          {
+                              policy.AllowAnyOrigin()
+                                    .AllowAnyHeader()
+                                    .AllowAnyMethod();
+                          });
+});
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -37,6 +51,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("coffee");
 
 app.UseHttpsRedirection();
 
