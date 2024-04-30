@@ -1,0 +1,277 @@
+{
+  "result": [
+    {
+      "Category": {
+        "CategoryId": 13,
+        "Name": "Random"
+      },
+      "Comments": {
+        "commentId": 7,
+        "userId": 3,
+        "recipeId": 4,
+        "text": "string"
+      },
+      "Country": {
+        "countryId": 5,
+        "countryName": "United States Minor Outlying Islands",
+        "continent": "string",
+        "region": [
+          {
+            "regionId": 12,
+            "regionName": "string",
+            "countryId": 2
+          }
+        ],
+        "language": [
+          {
+            "languageId": 19,
+            "languageName": "string",
+            "countryId": 10
+          }
+        ]
+      },
+      "DietaryPreference": {
+        "dietaryPreferenceId": 7,
+        "preferenceId": 20,
+        "preference": {
+          "preferenceId": 12,
+          "preferenceType": "string",
+          "preferenceDescription": "string",
+          "dietaryPreferenceId": [
+            "string"
+          ]
+        }
+      },
+      "Ingredient": {
+        "ingredientsId": 20,
+        "name": "string",
+        "categoryId": 6
+      },
+      "Kithen": {
+        "kitchenId": 1,
+        "name": "string",
+        "continent": "string",
+        "region": "string",
+        "countryId": 20
+      },
+      "Recipe": {
+        "recipeId": 19,
+        "name": "string",
+        "description": "string",
+        "origin": "string",
+        "instructions": "string",
+        "difficulty": 5,
+        "preperationTime": 3
+      },
+      "RecipeTag": {
+        "recipeTagId": 15,
+        "recipeId": 2,
+        "tag": "string"
+      },
+      "Review": {
+        "reviewId": 17,
+        "rating": 3,
+        "comment": "string",
+        "userId": 3,
+        "recipeId": 15
+      },
+      "UserFavorite": {
+        "userFavoriteId": 8,
+        "userId": 13
+      },
+      "UserHistory": {
+        "userHistoryId": 7,
+        "userId": 9,
+        "recipeId": 6
+      },
+      "Users": {
+        "userId": 13,
+        "username": "string",
+        "email": "Kyler42@gmail",
+        "password": "itVC3Xq5BOqasC3"
+      }
+    },
+    {
+      "Category": {
+        "CategoryId": 1,
+        "Name": "Random"
+      },
+      "Comments": {
+        "commentId": 14,
+        "userId": 7,
+        "recipeId": 7,
+        "text": "string"
+      },
+      "Country": {
+        "countryId": 3,
+        "countryName": "Malaysia",
+        "continent": "string",
+        "region": [
+          {
+            "regionId": 11,
+            "regionName": "string",
+            "countryId": 16
+          }
+        ],
+        "language": [
+          {
+            "languageId": 13,
+            "languageName": "string",
+            "countryId": 1
+          }
+        ]
+      },
+      "DietaryPreference": {
+        "dietaryPreferenceId": 5,
+        "preferenceId": 7,
+        "preference": {
+          "preferenceId": 8,
+          "preferenceType": "string",
+          "preferenceDescription": "string",
+          "dietaryPreferenceId": [
+            "string"
+          ]
+        }
+      },
+      "Ingredient": {
+        "ingredientsId": 12,
+        "name": "string",
+        "categoryId": 13
+      },
+      "Kithen": {
+        "kitchenId": 20,
+        "name": "string",
+        "continent": "string",
+        "region": "string",
+        "countryId": 19
+      },
+      "Recipe": {
+        "recipeId": 5,
+        "name": "string",
+        "description": "string",
+        "origin": "string",
+        "instructions": "string",
+        "difficulty": 15,
+        "preperationTime": 18
+      },
+      "RecipeTag": {
+        "recipeTagId": 14,
+        "recipeId": 10,
+        "tag": "string"
+      },
+      "Review": {
+        "reviewId": 12,
+        "rating": 12,
+        "comment": "string",
+        "userId": 8,
+        "recipeId": 4
+      },
+      "UserFavorite": {
+        "userFavoriteId": 3,
+        "userId": 15
+      },
+      "UserHistory": {
+        "userHistoryId": 20,
+        "userId": 7,
+        "recipeId": 20
+      },
+      "Users": {
+        "userId": 5,
+        "username": "string",
+        "email": "Gage.Runolfsdottir28@gmail",
+        "password": "ZL1GtMt4QZNsf57"
+      }
+    },
+    {
+      "Category": {
+        "CategoryId": 5,
+        "Name": "Random"
+      },
+      "Comments": {
+        "commentId": 1,
+        "userId": 12,
+        "recipeId": 13,
+        "text": "string"
+      },
+      "Country": {
+        "countryId": 1,
+        "countryName": "Nauru",
+        "continent": "string",
+        "region": [
+          {
+            "regionId": 1,
+            "regionName": "string",
+            "countryId": 2
+          }
+        ],
+        "language": [
+          {
+            "languageId": 1,
+            "languageName": "string",
+            "countryId": 20
+          }
+        ]
+      },
+      "DietaryPreference": {
+        "dietaryPreferenceId": 1,
+        "preferenceId": 18,
+        "preference": {
+          "preferenceId": 12,
+          "preferenceType": "string",
+          "preferenceDescription": "string",
+          "dietaryPreferenceId": [
+            "string"
+          ]
+        }
+      },
+      "Ingredient": {
+        "ingredientsId": 10,
+        "name": "string",
+        "categoryId": 8
+      },
+      "Kithen": {
+        "kitchenId": 9,
+        "name": "string",
+        "continent": "string",
+        "region": "string",
+        "countryId": 12
+      },
+      "Recipe": {
+        "recipeId": 13,
+        "name": "string",
+        "description": "string",
+        "origin": "string",
+        "instructions": "string",
+        "difficulty": 10,
+        "preperationTime": 12
+      },
+      "RecipeTag": {
+        "recipeTagId": 15,
+        "recipeId": 13,
+        "tag": "string"
+      },
+      "Review": {
+        "reviewId": 8,
+        "rating": 5,
+        "comment": "string",
+        "userId": 18,
+        "recipeId": 19
+      },
+      "UserFavorite": {
+        "userFavoriteId": 2,
+        "userId": 14
+      },
+      "UserHistory": {
+        "userHistoryId": 8,
+        "userId": 1,
+        "recipeId": 11
+      },
+      "Users": {
+        "userId": 15,
+        "username": "string",
+        "email": "Marcel0@gmail",
+        "password": "qIInPJNPxdRiuhe"
+      }
+    }
+  ]
+}
